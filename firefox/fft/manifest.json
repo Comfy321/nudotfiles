@@ -1,0 +1,20 @@
+{
+"manifest_version": 2,
+"name": "fft",
+"version": "0.3",
+"theme": {
+    "colors": {
+       "accentcolor": "#0c0c0c",
+       "textcolor": "white",
+       "toolbar": "#0c0c0c",
+       "toolbar_text": "white",
+       "toolbar_field": "#0c0c0c",
+       "toolbar_field_border": "#0c0c0c",
+       "toolbar_field_text": "white",
+       "toolbar_top_separator": "#ffa64f",
+       "toolbar_bottom_separator": "#0c0c0c",
+       "toolbar_vertical_separator": "#0c0c0c"
+    }
+  }
+
+}
