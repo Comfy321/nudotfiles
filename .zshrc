@@ -15,12 +15,12 @@ alias wfl="nmcli device wifi list"
 alias wfc="nmcli device wifi connect"
 alias utime='sudo ntpd -qg; sudo hwclock -w'
 alias ux='xrdb .Xresources'
-alias melee='./Downloads/launch-fm'
+alias melee='apulse ./Downloads/launch-fm'
 alias zshrc='vim ~/.zshrc'
 alias i3c='vim ~/.config/i3/config'
 alias vimrc='vim ~/.vimrc'
 alias setwp='feh --bg-scale'
-alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 1 && aplay test-mic.wav && rm -rf test-mic.wav'
+alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.1 && aplay test-mic.wav && rm -rf test-mic.wav'
 alias nettest='ping 8.8.8.8'
 autoload -Uz compinit
 compinit
