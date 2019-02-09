@@ -22,6 +22,7 @@ alias vimrc='vim ~/.vimrc'
 alias setwp='feh --bg-scale'
 alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.1 && aplay test-mic.wav && rm -rf test-mic.wav'
 alias nettest='ping 8.8.8.8'
+alias spotify='snap run spotify'
 autoload -Uz compinit
 compinit
 PROMPT='%F{6}%n%f@%F{5}%m%f %F{4}%~%f>'

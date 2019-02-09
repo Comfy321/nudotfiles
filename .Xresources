@@ -38,7 +38,8 @@
 
 !font
 URxvt.font: xft:Consolas:size=12,\
-	    xft:Kochi Gothic:antialias=false
+	    xft:Kochi Gothic:antialias=false,\
+	    xft:Baekmuk Gulim
 URxvt.scrollBar: false
 URxvt.letterSpace: 0
 
