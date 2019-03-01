@@ -1,8 +1,10 @@
+#meta stuff
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 zstyle :compinstall filename '/home/desu/.zshrc'
+#aliases
 alias pi='sudo pacman -S'
 alias h="cd ~"
 alias ls='ls --color=auto'
@@ -19,6 +21,7 @@ alias vimrc='vim ~/.vimrc'
 alias wm='networkmanager_dmenu'
 alias setwp='feh --bg-scale'
 
+#smaller aliases that work as "scripts"
 alias stopwatch='date1=`date +%s`; while true; do 
    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
 done'
@@ -30,6 +33,7 @@ compinit
 PROMPT='%F{6}%n%f@%F{5}%m%f %F{4}%~%f>'
 
 
+#functions
 function countdown(){
    date1=$((`date +%s` + $1));
    while [ "$date1" -ge `date +%s` ]; do
