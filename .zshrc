@@ -16,6 +16,7 @@ alias melee='apulse ./Downloads/launch-fm'
 alias zshrc='vim ~/.zshrc'
 alias i3c='vim ~/.config/i3/config'
 alias vimrc='vim ~/.vimrc'
+alias wm='networkmanager_dmenu'
 alias setwp='feh --bg-scale'
 
 alias stopwatch='date1=`date +%s`; while true; do 

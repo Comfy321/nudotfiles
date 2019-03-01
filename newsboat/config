@@ -1,0 +1,10 @@
+external-url-viewer "firefox"
+
+color listnormal white default
+color listfocus yellow default
+color listnormal_unread white default
+color listfocus_unread yellow default
+color info default default bold
+color article white default
+
+macro y set browser "apulse mpv %u"; open-in-browser ; set browser "firefox %u"
