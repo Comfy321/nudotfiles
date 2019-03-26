@@ -6,7 +6,6 @@ bindkey -v
 zstyle :compinstall filename '/home/desu/.zshrc'
 #aliases
 alias pi='sudo pacman -S'
-alias h="cd ~"
 alias ls='ls --color=auto'
 alias lsa='ls -A --color=auto'
 alias todo="cat ~/todo"
@@ -20,7 +19,7 @@ alias i3c='vim ~/.config/i3/config'
 alias vimrc='vim ~/.vimrc'
 alias wm='networkmanager_dmenu'
 alias setwp='feh --bg-scale'
-
+alias cterm='ps -aux | grep `ps -p $$ -o ppid=` '
 #smaller aliases that work as "scripts"
 alias stopwatch='date1=`date +%s`; while true; do 
    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
@@ -31,7 +30,6 @@ alias spotify='snap run spotify'
 autoload -Uz compinit
 compinit
 PROMPT='%F{6}%n%f@%F{5}%m%f %F{4}%~%f>'
-
 
 #functions
 function countdown(){
