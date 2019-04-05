@@ -39,3 +39,7 @@ function countdown(){
      sleep 0.1
    done
 }
+function random()
+{
+	echo -e "$(shuf -i 1-$1 -n 1)"
+}
