@@ -52,3 +52,9 @@ URxvt.url-select.underline: true
 URxvt.resize-font.smaller: C-j
 URxvt.resize-font.bigger: C-k
 URxvt.resize-font.reset: C-h
+
+           !State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+           rofi.color-normal: #0c0c0c,  #ffffff,  #0c0c0c,  #ffa64f,  #ffffff
+           rofi.color-urgent: #0c0c0c,  #ffffff,  #0c0c0c,  #ffa64f,  #ffffff
+           rofi.color-active: #0c0c0c,  #ffffff,  #0c0c0c,  #ffa64f,  #ffffff
+	   rofi.color-window: #0c0c0c, #ffa64f, #0c0c0c
