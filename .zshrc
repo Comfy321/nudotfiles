@@ -4,13 +4,15 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 zstyle :compinstall filename '/home/desu/.zshrc'
+
 #aliases
+alias fucking='sudo'
 alias pi='sudo pacman -S'
+alias csl='sudo ln -s'
 alias ls='ls --color=auto'
 alias lsa='ls -A --color=auto'
 alias todo="cat ~/todo"
 alias ux='xrdb .Xresources'
-alias melee='apulse ./Downloads/launch-fm'
 alias zshrc='vim ~/.zshrc'
 alias i3c='vim ~/.config/i3/config'
 alias vimrc='vim ~/.vimrc'
@@ -26,10 +28,12 @@ alias utime='sudo ntpd -qg; sudo hwclock -w'
 alias stopwatch='date1=`date +%s`; while true; do 
    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
 done'
-alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.1 && aplay test-mic.wav && rm -rf test-mic.wav'
-alias img='feh $(ls -A | grep -e jpg -e png -e gif| dmenu)'
+alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.5 && aplay test-mic.wav && rm -rf test-mic.wav'
+alias img='feh $(ls -A | grep -e jpg -e png -e gif| rofi -dmenu)'
+alias typora='~/tmp/typora/Typora-linux-x64/Typora'
 autoload -Uz compinit
 compinit
+_comp_options+=(globdots)
 PROMPT='%F{6}%n%f@%F{5}%m%f %F{4}%~%f>'
 
 #functions
