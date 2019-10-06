@@ -3,6 +3,7 @@
 
 if [ $# -eq 0 ]
 then
+    echo "Incomplete Arguments"
     exit 1
 fi
 
