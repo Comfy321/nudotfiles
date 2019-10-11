@@ -7,19 +7,21 @@ zstyle :compinstall filename '/home/desu/.zshrc'
 
 #aliases
 alias fucking='sudo'
+alias v='nvim'
 alias pi='sudo pacman -S'
 alias csl='sudo ln -s'
 alias ls='ls --color=auto'
 alias lsa='ls -A --color=auto'
 alias todo="cat ~/todo"
 alias ux='xrdb .Xresources'
-alias zshrc='vim ~/.zshrc'
-alias i3c='vim ~/.config/i3/config'
-alias vimrc='vim ~/.vimrc'
+alias zshrc='nvim ~/.zshrc'
+alias i3c='nvim ~/.config/i3/config'
+alias vimrc='nvim ~/.vimrc'
 alias wm='networkmanager_dmenu'
 alias nettest='ping 8.8.8.8'
 alias spotify='snap run spotify'
 alias setwp='feh --bg-scale'
+alias ccpp='g++ -std=gnu++0x'
 #smaller aliases that work as "scripts"
 alias cterm='ps -aux | grep `ps -p $$ -o ppid=` '
 alias wfl="nmcli device wifi list"
@@ -31,9 +33,12 @@ done'
 alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.5 && aplay test-mic.wav && rm -rf test-mic.wav'
 alias img='feh $(ls -A | grep -e jpg -e png -e gif| rofi -dmenu)'
 alias typora='~/tmp/typora/Typora-linux-x64/Typora'
-autoload -Uz compinit
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
-_comp_options+=(globdots)
+comp_options+=(globdots)
 PROMPT='%F{6}%n%f@%F{5}%m%f %F{4}%~%f>'
 
 #functions
@@ -48,3 +53,14 @@ function random()
 {
 	echo -e "$(shuf -i 1-$1 -n 1)"
 }
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
+#source /home/comfy/tmp/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
