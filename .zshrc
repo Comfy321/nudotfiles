@@ -8,6 +8,7 @@ zstyle :compinstall filename '/home/desu/.zshrc'
 #aliases
 alias fucking='sudo'
 alias v='nvim'
+alias sv='sudo nvim'
 alias pi='sudo pacman -S'
 alias csl='sudo ln -s'
 alias ls='ls --color=auto'
@@ -33,6 +34,7 @@ done'
 alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.5 && aplay test-mic.wav && rm -rf test-mic.wav'
 alias img='feh $(ls -A | grep -e jpg -e png -e gif| rofi -dmenu)'
 alias typora='~/tmp/typora/Typora-linux-x64/Typora'
+alias killmpd='sudo kill -9 $(sudo ps -A | grep mpd | cut -f 1 -d " ")'
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -63,4 +65,6 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
+# line cursor
+printf '\033[5 q\r'
 #source /home/comfy/tmp/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
