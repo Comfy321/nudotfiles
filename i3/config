@@ -12,7 +12,7 @@
 #le epic fibbonnaci epicness
 exec_always --no-startup-id "python /home/comfy/tmp/i3-alternating-layouts/alternating_layouts.py"
 #automatically set bg
-exec_always  feh --bg-scale ~/wallpapers/nature/trees.jpg
+exec_always  feh --bg-scale ~/wallpapers/nature/moreflowers.jpg
 #automatically use .Xresources
 exec_always xrdb ~/.Xresources
 #colors:
@@ -101,9 +101,9 @@ bindsym Mod4+v split v
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+#bindsym Mod4+s layout stacking
+#bindsym Mod4+w layout tabbed
+#bindsym Mod4+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+Shift+space floating toggle
@@ -196,6 +196,13 @@ mode "resize" {
 
 bindsym Mod4+r mode "resize"
 
+
+# music controls
+bindsym Mod4+Mod1+Left exec mpc prev
+bindsym Mod4+Mod1+Right exec mpc next
+bindsym Mod4+Mod1+Up exec mpc volume +5
+bindsym Mod4+Mod1+Down exec mpc volume -5
+bindsym Mod4+Mod1+space exec mpc toggle
 
 #Remove Titlebars:
 for_window [class="^.*"] border pixel 2

@@ -35,13 +35,14 @@
 *.color7:       #e9e9e9
 *.color15:      #fdfdfd
 
+URxvt.internalBorder: 4
 
 !font
-URxvt.font: xft:Consolas:size=12,\
+URxvt.font: xft:Code New Roman:size=12,\
 	    xft:Kochi Gothic:antialias=false,\
 	    xft:Baekmuk Gulim
 URxvt.scrollBar: false
-URxvt.letterSpace: 0
+!URxvt.letterSpace: 0
 
 !Extensions:
 URxvt.perl-ext-common: default,url-select,resize-font
@@ -50,7 +51,7 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
 URxvt.resize-font.smaller: C-j
-URxvt.resize-font.bigger: C-k
+URxvt.resize-font.bigger: C-u
 URxvt.resize-font.reset: C-h
 
            !State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
