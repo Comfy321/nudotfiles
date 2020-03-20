@@ -196,6 +196,9 @@ mode "resize" {
 
 bindsym Mod4+r mode "resize"
 
+# ALSA sound controls
+bindsym Mod4+Mod1+j exec amixer set "DX7s " 4%-
+bindsym Mod4+Mod1+k exec amixer set "DX7s " 4%+
 
 # music controls
 bindsym Mod4+Mod1+Left exec mpc prev
