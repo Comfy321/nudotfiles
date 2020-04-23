@@ -23,7 +23,7 @@ alias nettest='ping 8.8.8.8'
 alias spotify='snap run spotify'
 alias setwp='feh --bg-scale'
 alias ccpp='g++ -std=gnu++0x'
-#smaller aliases that work as "scripts"
+
 alias cterm='ps -aux | grep `ps -p $$ -o ppid=` '
 alias wfl="nmcli device wifi list"
 alias wfc="nmcli device wifi connect"
@@ -35,6 +35,18 @@ alias mictest='arecord --duration=5 --format=dat test-mic.wav &&sleep 0.5 && apl
 alias img='feh $(ls -A | grep -e jpg -e png -e gif| rofi -dmenu)'
 alias typora='~/tmp/typora/Typora-linux-x64/Typora'
 alias killmpd='sudo kill -9 $(sudo ps -A | grep mpd | cut -f 1 -d " ")'
+alias uwu='curl "https://corona-stats.online/?source=2"'
+
+# unrar to new directory w/ name of archive filename
+function ur() {
+    archive=$(echo $1 | rev | cut -c 5- | rev)
+    mkdir $archive
+    mv $1 $archive
+    cd $archive
+    unrar e $1
+    cd ..
+
+}
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
